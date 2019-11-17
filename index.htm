@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>Lafayette in Parallax</title>
+    <link rel="stylesheet" href="css/example.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+            $('.mob-menu').click(function(e) {
+                $('.menu').slideToggle(700);
+            });
+        });
+    </script>
+</head>
+<audio autoplay loop>
+      <source src="gold.mp3">
+</audio>
+<body > 
+    <header>
+    	<div id="logo">
+        	<a href="#"><img src="images/logo-org.png" alt="Chelsea"></a>
+        </div>
+        <a href="javascript:void(0);" class="mob-menu">Menu</a>
+         <ul id="social">
+        	<li><a href="#about"><class="target"><i class="fa fa-question"></i></a></li>
+			<li><a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="https://twitter.com/"><i class="fa fa-twitter-square"></i></a></li>
+ </ul>
+		<ul class="menu">
+        	<li><a href="index.htm">Main Street</a>
+            	<ul>
+                	<li><a href="index.htm">North Face</a></li>
+                    <li><a href="south.htm">South Face/ Under Construction</a></li>
+                </ul>
+            </li>
+			<li><a href="">Landmark Locations</a>
+            	<ul>
+                	<li><a href="taf.htm">Tippy Arts Federation</a></li>
+                    <li><a href="">John T. Meyers Pedestrian Bridge/ Under Construction</a></li>
+					</ul>
+            </li>
+        </ul>
+		
+		<span id="start" class="target"><!-- Hidden anchor to close all modals --></span>
+    <span id="about" class="target"><!-- Hidden anchor to open adjesting modal container--></span>
+    <div class="modal">
+      <div class="content vertical-align-middle">
+        <h2></h2>
+        <article><p>Lafayette in Parallax is a single-perspective, artistic rendition/expression, highlight of the local commerce and sociability of downtown Lafayette.<br><br><p>My name is Chelsea, and I'm the Designer/Delevoper of Lafayette in Parallax. If you have any questions or would like to contact me for any reason feel free to shoot me an email at info@lafayetteinparallax.com. I'll get back with you as soon as I can.<br><br> Cheers.</h2>
+	</article>
+        <a class="close-btn" href="#start">X</a>
+      </div>
+    </div>
+	
+	
+
+    </header>
+    <div class="horizon scroll">
+        <img src="images/horizon.png" alt="" />
+    </div>
+    <div class="middle scroll">
+        <img src="images/middle.png" alt="" />
+    </div>
+    <div class="front scroll">
+        <img src="images/front.png" alt="" />
+    
+	<div class="front2 scroll">
+        <img src="images/front2.png" alt="" />
+    </div></div>
+	<div class="music">
+        
+    </div>
+
+	<!--
+	<div class="text scroll">
+      
+    </div>-->
+     
+    <script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+            {
+            height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                console.log(percent);
+            }
+        });
+
+        $(window).resize(function() {
+          if ($(window).width() <= 768) {
+            elem.destroy();
+          }
+          else {
+            elem.reinitialize();
+          }
+        });
+    }(jQuery));
+    </script>
+</body>
+</html>

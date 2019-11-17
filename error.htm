@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>Lafayette in Parallax</title>
+    <link rel="stylesheet" href="css/example.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(e) {
+            $('.mob-menu').click(function(e) {
+                $('.menu').slideToggle(700);
+            });
+        });
+    </script>
+</head>
+<body > 
+    <header>
+    	<div id="logo">
+        	<a href="index.htm"><img src="images/logo-org.png" alt="Chelsea"></a>
+        </div>
+        <a href="javascript:void(0);" class="mob-menu">Menu</a>
+        <ul id="social">
+        	<li><a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="https://twitter.com/"><i class="fa fa-twitter-square"></i></a></li>
+			
+        </ul>
+        <ul class="menu">
+        	<li><a href="index.htm">Main Street</a>
+            	<ul>
+                	<li><a href="index.htm">North Face</a></li>
+                    <li><a href="error.htm">South Face/ Under Construction</a></li>
+                </ul>
+            </li>
+			<li><a href="error.htm">Landmark Locations</a>
+            	<ul>
+                	<li><a href="error.htm">Tippy Arts Federation/ Under Construction</a></li>
+                    <li><a href="error.htm">John T. Meyers Pedestrian Bridge/ Under Construction</a></li>
+					</ul>
+            </li>
+            <li><a href="about.htm">About/Contact</a></li>
+        </ul>
+    </header>
+	<h2>This page is still under development. Please check back at a later date.</h2>
+	
+   
+    <script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+            {
+            height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                console.log(percent);
+            }
+        });
+
+        $(window).resize(function() {
+          if ($(window).width() <= 768) {
+            elem.destroy();
+          }
+          else {
+            elem.reinitialize();
+          }
+        });
+    }(jQuery));
+    </script>
+</body>
+</html>
